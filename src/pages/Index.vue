@@ -2,12 +2,12 @@
   <Layout>
 
     <!-- Learn how to use images here: https://gridsome.org/docs/images -->
-    <g-image alt="Example image" src="~/favicon.png" width="135" />
+    <g-image alt="Example image" id="thefonso" src="~/thefonso.jpg" width="135" />
 
     <h1>Hello, world!</h1>
 
     <p>
-      Lorem ipsum dolor sit amet, consectetur adipisicing elit. Pariatur excepturi labore tempore expedita, et iste tenetur suscipit explicabo! Dolores, aperiam non officia eos quod asperiores
+      I'm Fonso. I'm a web development software engineer experienced in production level app development, UI / UX design, and frontend skills with Vue and React. Being a developer now is great. So many tools are available now, makes building things crazy fun.
     </p>
 
     <p class="home-links">
@@ -27,6 +27,9 @@ export default {
 </script>
 
 <style>
+#thefonso{
+  border-radius: 50%
+}
 .home-links a {
   margin-right: 1rem;
 }
