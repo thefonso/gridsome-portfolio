@@ -1,7 +1,7 @@
 <template>
   <section id="about-me">
     <!-- Learn how to use images here: https://gridsome.org/docs/images -->
-    <g-image alt="Example image" id="thefonso" src="~/thefonso.jpg" width="135" />
+    <g-image alt="Example image" id="thefonso" src="~/thefonso.jpg" width="150" />
 
     <h1>Hello, I'm Fonso</h1>
 

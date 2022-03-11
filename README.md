@@ -1,4 +1,4 @@
-# Default starter for Gridsome
+# Portfolio using VueJS, GraphQL and Gridsome
 
 This is the project you get when you run `gridsome create new-project`.
 
@@ -8,15 +8,17 @@ This is the project you get when you run `gridsome create new-project`.
 
 ### 2. Create a Gridsome project
 
-1. `gridsome create my-gridsome-site` to install default starter
-2. `cd my-gridsome-site` to open the folder
-3. `gridsome develop` to start a local dev server at `http://localhost:8080`
-4. Happy coding 🎉🙌
+1. clone this repo
+2. `cd repo-directory` to open the folder
+3. yarn install (or npn)
+4. `gridsome develop` to start a local dev server at `http://localhost:8080`
+
 # gridsome-portfolio
 
 ## Design
+(Screen shots go here)
 
-### Colors
+### Color Palette
 
 ```scss
 .color-palette {
@@ -27,4 +29,3 @@ This is the project you get when you run `gridsome create new-project`.
   #900c3f
 }
 ```
-Note: 2:10:00 portfolio cards begin
