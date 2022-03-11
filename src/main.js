@@ -12,10 +12,19 @@ export default function (Vue, { router,appOptions, head, isClient }) {
 
   head.link.push({
     rel: 'stylesheet',
+    href: 'https://cdn.jsdelivr.net/npm/font-awesome@4.x/css/font-awesome.min.css'
+  })
+
+  head.link.push({
+    rel: 'stylesheet',
     href: 'https://fonts.googleapis.com/css?family=Roboto:100,300,400,500,700,900',
   });
 
-  const opts = {  } //opts includes, vuetify themes, icons, etc.
+  const opts = {
+    icons: {
+      iconfont: 'fa4', // 'mdi' || 'mdiSvg' || 'md' || 'fa' || 'fa4' || 'faSvg'
+    },
+  } //opts includes, vuetify themes, icons, etc.
   Vue.use(Vuetify)
 
   appOptions.vuetify = new Vuetify(opts);

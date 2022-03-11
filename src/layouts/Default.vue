@@ -47,6 +47,8 @@ export default {
       items: [
         { title: 'About Me', icon: 'mdi-human-greeting-variant' },
         { title: 'Projects', icon: 'mdi-view-dashboard' },
+        { title: 'Blog', icon: 'mdi-book' },
+        { title: 'Education', icon: 'mdi-school'},
         { title: 'Contact', icon: 'mdi-at' },
       ],
       right: null,
@@ -72,7 +74,8 @@ body {
 }
 
 .layout {
-  max-width: 760px;
+  /*TODO: what width you want as max*/
+  /*max-width: 760px;*/
   margin: 20px;
   padding-left: 20px;
   padding-right: 20px;
