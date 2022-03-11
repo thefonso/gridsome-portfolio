@@ -1,5 +1,5 @@
 <template>
-  <section>
+  <section id="about-me">
     <!-- Learn how to use images here: https://gridsome.org/docs/images -->
     <g-image alt="Example image" id="thefonso" src="~/thefonso.jpg" width="135" />
 

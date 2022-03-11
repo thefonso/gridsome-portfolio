@@ -1,5 +1,5 @@
 <template>
-<section>
+<section id="education">
   <v-container>
     <v-row>
       <v-col>

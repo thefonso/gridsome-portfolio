@@ -22,6 +22,7 @@
               v-for="item in items"
               :key="item.title"
               link
+              :to="`#${item.title.toLowerCase().replace(' ','-')}`"
           >
             <v-list-item-icon>
               <v-icon>{{ item.icon }}</v-icon>
@@ -66,6 +67,9 @@ query {
 </static-query>
 
 <style>
+html {
+  scroll-behavior: smooth;
+}
 body {
   font-family: -apple-system,system-ui,BlinkMacSystemFont,"Segoe UI",Roboto,"Helvetica Neue",Arial,sans-serif;
   margin:0;
