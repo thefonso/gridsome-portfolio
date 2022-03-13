@@ -40,7 +40,7 @@
 
 <script>
 export default {
-  name: "The Story",
+  name: "Education",
   data: () => ({
     years: [
       {

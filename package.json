@@ -7,6 +7,9 @@
     "explore": "gridsome explore"
   },
   "dependencies": {
+    "@sgrove/graphiql-explorer": "^0.8.0",
+    "axios": "^0.26.1",
+    "graphiql": "^1.7.1",
     "gridsome": "^0.7.0",
     "vuetify": "^2.6.4"
   },

@@ -14,15 +14,12 @@
 
         <v-divider></v-divider>
 
-        <v-list
-            dense
-            nav
-        >
+        <v-list dense nav>
           <v-list-item
               v-for="item in items"
               :key="item.title"
               link
-              :to="`#${item.title.toLowerCase().replace(' ','-')}`"
+              :to="item.url"
           >
             <v-list-item-icon>
               <v-icon>{{ item.icon }}</v-icon>
@@ -43,14 +40,15 @@
 
 <script>
 export default {
+
   data () {
     return {
       items: [
-        { title: 'About Me', icon: 'mdi-human-greeting-variant' },
-        { title: 'Projects', icon: 'mdi-view-dashboard' },
-        { title: 'Blog', icon: 'mdi-book' },
-        { title: 'Education', icon: 'mdi-school'},
-        { title: 'Contact', icon: 'mdi-at' },
+        { title: 'About Me', icon: 'mdi-human-greeting-variant', url:'#about-me' },
+        { title: 'Projects', icon: 'mdi-view-dashboard', url:'#projects' },
+        { title: 'Blog', icon: 'mdi-book', url:'blog' },
+        { title: 'Education', icon: 'mdi-school', url:'#education'},
+        { title: 'Contact', icon: 'mdi-at', url:'#contact' },
       ],
       right: null,
     }

@@ -5,8 +5,10 @@
 // Changes here require a server restart.
 // To restart press CTRL + C in terminal and run `gridsome develop`
 const nodeExternals = require('webpack-node-externals')
+const axios = require('axios')
 
 module.exports = function (api) {
+
   api.chainWebpack((config, { isServer }) => {
     if (isServer) {
       config.externals([
@@ -17,11 +19,28 @@ module.exports = function (api) {
     }
   })
 
-  api.loadSource(({ addCollection }) => {
-    // Use the Data Store API here: https://gridsome.org/docs/data-store-api/
+  api.loadSource(async actions => {
+    const { data } = await axios.get('https://swapi.dev/api/films')
+
+    const collection = actions.addCollection({
+      typeName: 'Post'
+    })
+
+    for (const item of data.results) {
+      collection.addNode({
+        id: item.id,
+        title: item.title
+      })
+    }
   })
 
-  api.createPages(({ createPage }) => {
-    // Use the Pages API here: https://gridsome.org/docs/pages-api/
+  api.configureServer(app => {
+    //what should this be???
+    // app.get('/graphql', (req, res) => {
+    //   res.send('Hello, world!')
+    // })
   })
+  // api.createPages(({ createPage }) => {
+  //   // Use the Pages API here: https://gridsome.org/docs/pages-api/
+  // })
 }
