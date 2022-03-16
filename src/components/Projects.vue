@@ -1,4 +1,5 @@
 <template>
+
   <section id="projects" class="project-section">
     <v-container>
       <v-row>
@@ -47,6 +48,7 @@
       </v-row>
     </v-container>
   </section>
+
 </template>
 
 <script>

@@ -20,16 +20,16 @@ module.exports = function (api) {
   })
 
   api.loadSource(async actions => {
-    const { data } = await axios.get('https://swapi.dev/api/films')
+    const { data } = await axios.get('https://api.github.com/users/thefonso/gists')
 
     const collection = actions.addCollection({
       typeName: 'Post'
     })
 
-    for (const item of data.results) {
+    for (const item of data) {
       collection.addNode({
         id: item.id,
-        title: item.title
+        title: item.description
       })
     }
   })
