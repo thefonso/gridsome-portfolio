@@ -10,6 +10,7 @@ what we want
     <hr>
   <div v-for="edge in $page.posts.edges" :key="edge.node.id">
     <h2>{{ edge.node.title }}</h2>
+    <h4>{{ edge.node.content }}</h4>
   </div>
   </section>
 </template>
@@ -21,6 +22,7 @@ query {
       node {
         id
         title
+        content
       }
     }
   }

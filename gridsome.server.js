@@ -28,12 +28,13 @@ module.exports = function (api) {
 
     for (const item of data) {
       const contentUrl = Object.values(item.files)[0].raw_url
-      const { data: content } = await axios.get(contentUrl)
+      const { data } = await axios.get(contentUrl)
+      console.log("PONG",data)
       collection.addNode({
         id: item.id,
         title: item.description,
         content_url: contentUrl,
-        content: content
+        content: data.toString().substring(90,0)
       })
     }
   })
