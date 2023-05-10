@@ -8,7 +8,7 @@ const nodeExternals = require('webpack-node-externals')
 const axios = require('axios')
 
 module.exports = function (api) {
-
+//is this for vuetify?
   api.chainWebpack((config, { isServer }) => {
     if (isServer) {
       config.externals([
@@ -18,7 +18,7 @@ module.exports = function (api) {
       ])
     }
   })
-
+ //this gives us the gist data
   api.loadSource(async actions => {
     const { data } = await axios.get('https://api.github.com/users/thefonso/gists')
 
@@ -40,7 +40,7 @@ module.exports = function (api) {
     //   res.send('Hello, world!')
     // })
   })
-  // api.createPages(({ createPage }) => {
-  //   // Use the Pages API here: https://gridsome.org/docs/pages-api/
-  // })
+  api.createPages(({ createPage }) => {
+    // Use the Pages API here: https://gridsome.org/docs/pages-api/
+  })
 }

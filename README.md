@@ -61,10 +61,44 @@ to do / in progress / done
 
 https://gridsome.org/docs/querying-data/
 
+https://gridsome.org/docs/fetching-data/#import-from-apis 
+
+First we need Axios (we could use Fetch but this is better)
+Place this in the package.json under "dependencies"
+
+```javascript
+"axios": "^0.26.1",
+```
+
+Put this into gridsome.server.js
+
+```javascript
+//this gives us the gist data
+  api.loadSource(async actions => {
+    const { data } = await axios.get('https://api.github.com/users/thefonso/gists')
+
+    const collection = actions.addCollection({
+      typeName: 'Post'
+    })
+
+    for (const item of data) {
+      collection.addNode({
+        id: item.id,
+        title: item.description
+      })
+    }
+  })
+```
+
+Now go to the explorer
+
+`http://localhost:8080/___explore`
+
 - here is how you call the end point
 - this is EXACTLY what you do to see the data response in the GraphQL gui
 - here is how you call that data via GraphQL in a Gridsome page
 - same for a Gridsome component
+- What is GraphiQL?
 
 
 
