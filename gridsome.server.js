@@ -27,9 +27,13 @@ module.exports = function (api) {
     })
 
     for (const item of data) {
+      const contentUrl = Object.values(item.files)[0].raw_url
+      const { data: content } = await axios.get(contentUrl)
       collection.addNode({
         id: item.id,
-        title: item.description
+        title: item.description,
+        content_url: contentUrl,
+        content: content
       })
     }
   })
