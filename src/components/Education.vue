@@ -23,10 +23,10 @@
             </template>
             <div class="py-4">
               <h2 :class="`headline font-weight-light mb-4 ${year.color}--text`">
-                Lorem ipsum
+                {{ year.Title }}
               </h2>
               <div>
-                Lorem ipsum dolor sit amet, no nam oblique veritus. Commune scaevola imperdiet nec ut, sed euismod convenire principes at. Est et nobis iisque percipit, an vim zril disputando voluptatibus, vix an salutandi sententiae.
+                {{ year.content }}
               </div>
             </div>
           </v-timeline-item>
@@ -46,22 +46,26 @@ export default {
       {
         color: 'cyan',
         year: '2020',
+        Title: 'Cox Auto',
+        content: 'Built an in-house application to be used as a style guide for React components used throughout many of the clients online properties.'
       },
       {
         color: 'green',
-        year: '2010',
+        year: '2018',
+        Title: 'LaunchLab9',
+        content: 'Started my own firm where I sourced and led teams of independent contractors to design and develop MVP apps.'
       },
       {
         color: 'pink',
         year: '2017',
+        Title: 'DoclerMedia',
+        content: 'At DoclerMedia I worked on a team to update legacy code to modern libraries like React.'
       },
       {
         color: 'amber',
         year: '2014',
-      },
-      {
-        color: 'orange',
-        year: '2010',
+        Title: 'General Assembly',
+        content: 'Moved to Los Angeles and helped develop a curriculum for a 12 week immersive program which included AngularJS and Ruby on Rails.'
       },
     ],
   }),
